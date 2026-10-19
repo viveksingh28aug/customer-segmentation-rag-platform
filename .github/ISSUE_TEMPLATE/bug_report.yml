@@ -1,0 +1,73 @@
+name: Bug report
+description: Report a reproducible defect in the pipeline, API, dashboard, or analyst chat.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the project. Remove API keys, customer data, and local paths from logs before submitting.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Data pipeline
+        - Segmentation
+        - Recommendations
+        - FastAPI
+        - Streamlit UI
+        - Analyst Chat / RAG
+        - Documentation or setup
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Start ...
+        2. Open ...
+        3. Submit ...
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.x"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Data mode
+      options:
+        - Bundled sample data
+        - Full pipeline output
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      description: Paste the smallest relevant traceback. Do not include `.env`, keys, prompts containing private data, or source records.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed credentials and private/customer data.
+          required: true
+        - label: I searched existing issues first.
+          required: true
+

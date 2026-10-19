@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a focused analytics, engineering, or usability improvement.
+title: "[Feature]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the analyst or engineering need before proposing implementation details.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: What should a user be able to do after this change?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Data and validation considerations
+      description: Note required data, metric definitions, tests, and risks of misleading interpretation.
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This can remain local-first and does not make a paid service mandatory.
+          required: true
+        - label: This does not require committing private source data or secrets.
+          required: true
+

@@ -1,0 +1,18 @@
+[theme]
+primaryColor = "#2563EB"
+backgroundColor = "#F8FAFC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F172A"
+linkColor = "#1D4ED8"
+borderColor = "#DCE3ED"
+baseRadius = "0.75rem"
+buttonRadius = "0.6rem"
+showWidgetBorder = true
+base = "light"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
